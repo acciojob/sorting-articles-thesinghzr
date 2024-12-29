@@ -1,0 +1,31 @@
+/*  your css code here. If applicable */
+body {
+	font-family: Arial, sans-serif;
+}
+
+#main {
+	background: url("https://plus.unsplash.com/premium_photo-1726863047217-90b1244706a3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 97vh;
+	overflow: hidden;
+}
+
+#list {
+	margin: 0 auto;
+	width: 60%;
+	background: rgba(0, 0, 0, .1);
+}
+
+ul {
+	background: #fff;
+	width: 80%;
+	margin: 0 auto;
+}
+
+li {
+	border-bottom: 1px solid #eee;
+	padding: 14.9px 0;
+	list-style-type: square;
+	font-size: 1.2rem;
+}
