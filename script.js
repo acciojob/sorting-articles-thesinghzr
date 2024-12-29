@@ -1,34 +1,26 @@
-
 const bands = [
-  'The Plot in You',
-  'The Devil Wears Prada',
-  'Pierce the Veil',
-  'Norma Jean',
-  'The Bled',
-  'Say Anything',
-  'The Midway State',
-  'We Came as Romans',
-  'Counterparts',
-  'Oh, Sleeper',
-  'A Skylit Drive',
-  'Anywhere But Here',
-  'An Old Dog'
+    'The Plot in You',
+    'The Devil Wears Prada',
+    'Pierce the Veil',
+    'Norma Jean',
+    'The Bled',
+    'Say Anything',
+    'The Midway State',
+    'We Came as Romans',
+    'Counterparts',
+    'Oh, Sleeper',
+    'A Skylit Drive',
+    'Anywhere But Here',
+    'An Old Dog'
 ];
 
-// Function to remove "a", "an", "the" from the beginning of a band name
-function stripArticles(bandName) {
-  return bandName.replace(/^(a |an |the )/i, '').trim();
-}
+const strip = (band) => band.replace(/^(a |an |the )/i, '').trim();
 
-// Sort the band names while ignoring the articles
-const sortedBands = bands.sort((a, b) => {
-  return stripArticles(a).localeCompare(stripArticles(b));
-});
+const sortedBands = bands.sort((a, b) => strip(a).localeCompare(strip(b)));
 
-// Populate the list on the webpage
-const bandList = document.getElementById('band');
+const ul = document.getElementById('band');
 sortedBands.forEach(band => {
-  const li = document.createElement('li');
-  li.textContent = band;
-  bandList.appendChild(li);
+    const li = document.createElement('li');
+    li.textContent = band;
+    ul.appendChild(li);
 });
